@@ -1,0 +1,6 @@
+[submodule "deps/folly"]
+	path = deps/folly
+	url = https://github.com/tnicklin/folly.git
+[submodule "deps/fbthrift"]
+	path = deps/fbthrift
+	url = https://github.com/tnicklin/fbthrift.git

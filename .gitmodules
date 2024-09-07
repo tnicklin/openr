@@ -4,3 +4,15 @@
 [submodule "deps/fbthrift"]
 	path = deps/fbthrift
 	url = https://github.com/tnicklin/fbthrift.git
+[submodule "deps/fb303"]
+	path = deps/fb303
+	url = https://github.com/tnicklin/fb303.git
+[submodule "deps/fizz"]
+	path = deps/fizz
+	url = https://github.com/tnicklin/fizz.git
+[submodule "deps/wangle"]
+	path = deps/wangle
+	url = https://github.com/tnicklin/wangle.git
+[submodule "deps/mvfst"]
+	path = deps/mvfst
+	url = https://github.com/tnicklin/mvfst.git

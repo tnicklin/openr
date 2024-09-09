@@ -16,7 +16,9 @@ cd openr
 ```
 If you forgot to clone the submodules:
 
+```bash
 git submodule update --init --recursive
+```
 
 ## Build the Docker Image
 

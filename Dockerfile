@@ -216,6 +216,9 @@ ENV LD_LIBRARY_PATH="/opt/openr/lib:$LD_LIBRARY_PATH"
 
 FROM build_openr AS install_openr
 
+COPY gen.py /src/openr/build
+COPY cython_compile.py /src/openr/build
+
 # Install Open/R
 RUN mkdir -p /src/openr/fb303-thrift && \
     cp -r /opt/fb303/include/thrift-files/fb303 /src/openr/fb303-thrift && \

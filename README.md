@@ -1,9 +1,3 @@
-
----
-
-### **HTML Version**
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,4 +104,3 @@ docker run -e OPENR_CTRL_PORT -p $OPENR_CTRL_PORT:$OPENR_CTRL_PORT \
     <p>This repository and the source code it contains are licensed under the MIT License.</p>
 </body>
 </html>
-

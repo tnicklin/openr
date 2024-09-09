@@ -187,6 +187,9 @@ ENV LD_LIBRARY_PATH="/opt/fbthrift/lib:$LD_LIBRARY_PATH"
 
 FROM build_fbthrift AS build_fb303
 
+COPY FBThriftConfig.cmake /opt/fbthrift/lib/cmake/fbthrift/
+COPY schema.thrift /opt/fbthrift/include/thrift/lib/thrift/
+
 # Copy and build fb303 in a single RUN command
 COPY deps/fb303 /deps/fb303
 RUN cd /deps/fb303 && \

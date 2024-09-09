@@ -239,7 +239,13 @@ RUN mkdir -p /src/openr/fb303-thrift && \
     cp -r /deps/folly/folly/python/* /src/openr/folly/
 
 RUN cd /src/openr && \
-    python3 build/gen.py && \
+    python3 build/gen.py
+
+RUN echo " " > /src/openr/fbthrift-thrift/gen-cpp2/metadata_metadata.h && \
+echo " " > /src/openr/fbthrift-thrift/gen-cpp2/metadata_types.h && \
+echo " " > /src/openr/fbthrift-thrift/gen-cpp2/metadata_types_custom_protocol.h
+
+RUN cd /src/openr && \
     python3 build/cython_compile.py && \
     python3 openr/py/setup.py build -j$(nproc) && \
     python3 openr/py/setup.py install

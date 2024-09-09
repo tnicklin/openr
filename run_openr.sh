@@ -4,13 +4,12 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 
-CFG_BASE="/config"
 DEFAULT_CFG="/etc/openr.conf"
 INSTALL_BASE="/opt"
 
 # Allow config file to be passed as an argument
 if [ "$1" ]; then
-  OPENR_CFG="$CFG_BASE/$1"
+  OPENR_CFG=$1
   shift
 else
   echo "[$(date)] Error: No config file specified."

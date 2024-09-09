@@ -139,7 +139,7 @@ FROM build_folly AS build_fizz
 COPY deps/fizz /deps/fizz
 RUN cd /deps/fizz && \
     mkdir _build && cd _build && \
-    cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/fizz .. && \
+    cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/fizz ../fizz && \
     make -j$(nproc) && make install && \
     cd / && rm -rf /deps/fizz/_build
 
@@ -152,7 +152,7 @@ FROM build_fizz AS build_wangle
 COPY deps/wangle /deps/wangle
 RUN cd /deps/wangle && \
     mkdir _build && cd _build && \
-    cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/wangle .. && \
+    cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/wangle ../wangle && \
     make -j$(nproc) && make install && \
     cd / && rm -rf /deps/wangle/_build
 

@@ -20,7 +20,7 @@ fi
 
 # Check if the first argument is a config file
 if [ -n "$1" ]; then
-    CONFIG_FILE=$1
+    CONFIG_FILE=$CONFIG_BASE/$1
     if [ -f "$CONFIG_FILE" ]; then
         echo "Starting Open/R with config file: $CONFIG_FILE"
         CONTROL_PORT=$(get_control_port "$CONFIG_FILE")

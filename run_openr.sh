@@ -5,11 +5,12 @@
 # LICENSE file in the root directory of this source tree.
 
 DEFAULT_CFG="/etc/openr.conf"
+CONFIG_BASE="/config"
 INSTALL_BASE="/opt"
 
 # Allow config file to be passed as an argument
 if [ "$1" ]; then
-  OPENR_CFG=$1
+  OPENR_CFG="$CONFIG_BASE/$1"
   shift
 else
   echo "[$(date)] Error: No config file specified."

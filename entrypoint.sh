@@ -1,8 +1,10 @@
 #!/bin/bash
 
+CONFIG_BASE="/config"
+
 # Function to extract the openr_ctrl_port from the JSON config file
 get_control_port() {
-    CONFIG_FILE=$1
+    CONFIG_FILE="$CONFIG_BASE/$1"
     PORT=$(grep -oP '"openr_ctrl_port"\s*:\s*\K[0-9]+' "$CONFIG_FILE")
     if [ -z "$PORT" ]; then
         echo "Error: Control port not found in $CONFIG_FILE. Using default port 2018."

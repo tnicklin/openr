@@ -216,6 +216,8 @@ ENV LD_LIBRARY_PATH="/opt/openr/lib:$LD_LIBRARY_PATH"
 
 FROM build_openr AS install_openr
 
+ENV CFLAGS="-I/deps/folly -I/deps/fbthrift $CFLAGS"
+
 COPY gen.py /src/openr/build
 COPY cython_compile.py /src/openr/build
 
